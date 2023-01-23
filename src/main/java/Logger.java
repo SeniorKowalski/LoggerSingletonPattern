@@ -15,7 +15,7 @@ public class Logger {
         System.out.println("[" + dateTime.withNano(0).format(formatter) + " " + counter++ + "] " + msg);
     }
 
-    public static Logger getInstance() {
+    public static synchronized Logger getInstance() {
         return logger;
     }
 }
